@@ -2,7 +2,6 @@
 
 > **[View Live Site ➔](https://rekia-fadla.netlify.app)**
 
-Hosted on [Netlify](https://www.netlify.com/).
 
 ---
 
