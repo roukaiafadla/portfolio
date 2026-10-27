@@ -333,7 +333,7 @@ body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;op
     <div class="track" id="track"></div>
   </div>
 
-  <!-- SKILLS -->
+   <!-- SKILLS -->
   <section class="skills" id="skills">
     <div class="wrap">
       <div class="head reveal"><h2>My <span class="hl">skills</span></h2><p>The tools I use from the sensor to the screen.</p></div>
@@ -344,11 +344,11 @@ body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;op
         </div>
         <div class="reveal sk" style="--d:.08s">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>Embedded &amp; IoT</h3>
-          <div class="chips"><span>ESP32</span><span>Arduino</span><span>Raspberry Pi</span><span>ARM</span><span>SPI</span><span>I2C</span><span>UART</span><span>MQTT</span><span>Embedded Linux</span></div>
+          <div class="chips"><span>ESP32</span><span>Arduino</span><span>Raspberry Pi</span><span>ARM</span><span>SPI</span><span>I2C</span><span>UART</span><span>MQTT</span><span>Node-RED</span><span>Embedded Linux</span></div>
         </div>
         <div class="reveal sk" style="--d:.16s">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4 4 4 0 0 0-3 4 4 4 0 0 0 2 3.5A4 4 0 0 0 12 19V3zM12 3a4 4 0 0 1 4 4 4 4 0 0 1 3 4 4 4 0 0 1-2 3.5A4 4 0 0 1 12 19"/></svg>AI &amp; Data</h3>
-          <div class="chips"><span>scikit-learn</span><span>TensorFlow / Keras</span><span>OpenCV</span><span>YOLOv12</span><span>EasyOCR</span><span>NumPy</span><span>Weka</span><span>PCA</span></div>
+          <div class="chips"><span>scikit-learn</span><span>TensorFlow / Keras</span><span>TFLite Micro</span><span>OpenCV</span><span>YOLOv12</span><span>EasyOCR</span><span>NumPy</span><span>Weka</span><span>PCA</span></div>
         </div>
         <div class="reveal sk" style="--d:.08s">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M12 7.5V13M12 13l-6 4.5M12 13l6 4.5"/></svg>Networking</h3>
@@ -367,20 +367,23 @@ body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;op
     <div class="wrap cat">
       <div class="head reveal"><h2>Hardware <span class="hl">&amp; IoT</span></h2><p>Sensors, firmware and the systems around them.</p></div>
       <div class="grid two">
-        <div class="reveal">
+        
+        <!-- 1. TinyML -->
+        <div class="reveal" style="--d:.0s">
           <article class="card">
-            <div class="media"><span class="tag">IoT</span><img src="images/plantcare.jpg" data-ph="PlantCare" data-i="1" alt="PlantCare dashboard and ESP32 irrigation prototype" loading="lazy"></div>
+            <div class="media"><span class="tag">TinyML & AI</span><img src="images/tinyml.jpg" data-ph="TinyML Anomaly" data-i="14" alt="TinyML anomaly detection on ESP32" loading="lazy"></div>
             <div class="body">
-              <h3>PlantCare</h3>
-              <p>End-to-end ESP32 IoT irrigation with MQTT and live dashboard.</p>
-              <div class="stack"><span>ESP32</span><span>C++</span><span>Node.js</span><span>MongoDB</span></div>
+              <h3>TinyML Anomaly Detection</h3>
+              <p>Unsupervised autoencoder on ESP32 for environmental anomalies (INT8, 3.4 KB model).</p>
+              <div class="stack"><span>ESP32</span><span>C++</span><span>Python</span><span>TensorFlow</span></div>
               <div class="links">
-                <a href="https://plantcare-azure.vercel.app" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-                <a href="https://github.com/roukaiafadla/plantcare" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a href="https://github.com/roukaiafadla/tinyml-env-anomaly" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
               </div>
             </div>
           </article>
         </div>
+        
+        <!-- 2. Smart Parking -->
         <div class="reveal" style="--d:.12s">
           <article class="card">
             <div class="media"><span class="tag">IoT &amp; AI</span><img src="images/smart-parking.jpg" data-ph="Smart Parking" data-i="2" alt="Smart Parking prototype with RFID and camera" loading="lazy"></div>
@@ -394,6 +397,23 @@ body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;op
             </div>
           </article>
         </div>
+
+        <!-- 3. PlantCare -->
+        <div class="reveal" style="--d:.24s">
+          <article class="card">
+            <div class="media"><span class="tag">IoT</span><img src="images/plantcare.jpg" data-ph="PlantCare" data-i="1" alt="PlantCare dashboard and ESP32 irrigation prototype" loading="lazy"></div>
+            <div class="body">
+              <h3>PlantCare</h3>
+              <p>End-to-end ESP32 IoT irrigation with MQTT and live dashboard.</p>
+              <div class="stack"><span>ESP32</span><span>C++</span><span>Node.js</span><span>MongoDB</span></div>
+              <div class="links">
+                <a href="https://plantcare-azure.vercel.app" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a href="https://github.com/roukaiafadla/plantcare" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
       </div>
     </div>
   </section>
@@ -401,66 +421,77 @@ body::after{content:"";position:fixed;inset:0;z-index:150;pointer-events:none;op
   <!-- SOFTWARE & AI -->
   <section id="software">
     <div class="wrap cat">
+      
       <div class="head reveal"><h2>Software <span class="hl">&amp; Applied AI</span></h2><p>Full-stack products and machine learning, built properly.</p></div>
       <div class="grid">
+        
+        <!-- 1. Wassit -->
         <div class="reveal">
+          <article class="card">
+            <div class="media"><span class="tag">AI + Full-stack</span><img src="images/wassit.jpg" data-ph="Wassit" data-i="3" alt="Wassit live job feed" loading="lazy"></div>
+            <div class="body">
+              <h3>Wassit</h3>
+              <p>AI-assisted hyperlocal marketplace using the Gemini API and Socket.io for real-time bidding.</p>
+              <div class="stack"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span></div>
+              <div class="links">
+                <a href="https://wassit-omega.vercel.app/" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a href="https://github.com/roukaiafadla/wassit" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2. Shaghaf -->
+        <div class="reveal" style="--d:0.1s">
+          <article class="card">
+            <div class="media"><span class="tag">Full-stack + AI</span><img src="images/shaghaf.jpg" data-ph="Shaghaf" data-i="4" alt="Shaghaf hobby community platform" loading="lazy"></div>
+            <div class="body">
+              <h3>Shaghaf</h3>
+              <p>Community platform with JWT auth, Cloudinary uploads, and Gemini API for AI image understanding.</p>
+              <div class="stack"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+              <div class="links">
+                <a href="https://shaghaf-sigma.vercel.app" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a href="https://github.com/roukaiafadla/shaghaf" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. ml-lab -->
+        <div class="reveal" style="--d:0.2s">
+          <article class="card">
+            <div class="media"><span class="tag">Machine Learning</span><img src="images/ml-lab.jpg" data-ph="ml-lab" data-i="5" alt="ml-lab learning curves and results" loading="lazy"></div>
+            <div class="body">
+              <h3>ml-lab</h3>
+              <p>Machine learning algorithms from scratch with NumPy, verified against scikit-learn with CI testing.</p>
+              <div class="stack"><span>Python</span><span>NumPy</span><span>scikit-learn</span><span>pytest</span></div>
+              <div class="links">
+                <a href="https://github.com/roukaiafadla/ml-lab" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4. Wanderly -->
+        <div class="reveal" style="--d:0.3s">
           <article class="card">
             <div class="media"><span class="tag">Full-stack</span><img src="images/wanderly.jpg" data-ph="Wanderly" data-i="1" alt="Wanderly travel agency website" loading="lazy"></div>
             <div class="body">
               <h3>Wanderly</h3>
-              <p>Full-stack travel agency site with an admin dashboard, custom Node.js backend, tests and CI.</p>
+              <p>Full-stack travel agency site with an admin dashboard, custom zero-framework Node.js backend, tests and CI.</p>
               <div class="stack"><span>Node.js</span><span>libSQL / Turso</span><span>Vanilla JS</span></div>
-              <div class="links"><a href="https://wanderly-wfy4.onrender.com" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/roukaiafadla/wanderly" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
+              <div class="links">
+                <a href="https://wanderly-wfy4.onrender.com" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a href="https://github.com/roukaiafadla/wanderly" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              </div>
             </div>
           </article>
         </div>
-        <div class="reveal" style="--d:0.1s">
-          <article class="card">
-            <div class="media"><span class="tag">Full-stack</span><img src="images/shaghaf.jpg" data-ph="Shaghaf" data-i="4" alt="Shaghaf hobby community platform" loading="lazy"></div>
-            <div class="body">
-              <h3>Shaghaf</h3>
-              <p>Community platform for sharing hobbies and creative work, with JWT auth and Cloudinary image uploads.</p>
-              <div class="stack"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
-              <div class="links"><a href="https://shaghaf-sigma.vercel.app" target="_blank" rel="noopener">Live Demo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a><a href="https://github.com/roukaiafadla/shaghaf" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
-            </div>
-          </article>
-        </div>
-        <div class="reveal" style="--d:0.2s">
-          <article class="card">
-            <div class="media"><span class="tag">AI</span><img src="images/wassit.jpg" data-ph="Wassit" data-i="3" alt="Wassit live job feed" loading="lazy"></div>
-            <div class="body">
-              <h3>Wassit</h3>
-              <p>AI-assisted hyperlocal marketplace using the Gemini API and Socket.io.</p>
-              <div class="stack"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span></div>
-              <div class="links"><a href="https://github.com/roukaiafadla/wassit" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
-            </div>
-          </article>
-        </div>
-        <div class="reveal">
-          <article class="card">
-            <div class="media"><span class="tag">Machine learning</span><img src="images/ml-lab.jpg" data-ph="ml-lab" data-i="5" alt="ml-lab learning curves and results" loading="lazy"></div>
-            <div class="body">
-              <h3>ml-lab</h3>
-              <p>ML algorithms from scratch with NumPy and CI testing.</p>
-              <div class="stack"><span>Python</span><span>NumPy</span><span>scikit-learn</span></div>
-              <div class="links"><a href="https://github.com/roukaiafadla/ml-lab" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
-            </div>
-          </article>
-        </div>
-        <div class="reveal" style="--d:0.1s">
-          <article class="card">
-            <div class="media"><span class="tag">Landing page</span><img src="images/lawyer-landing.jpg" data-ph="Lawyer Landing Page" data-i="7" alt="Responsive law-firm landing page" loading="lazy"></div>
-            <div class="body">
-              <h3>Lawyer Landing Page</h3>
-              <p>Simple responsive law-firm landing page in pure HTML, CSS and JS, built from my own Figma design.</p>
-              <div class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span></div>
-              <div class="links"><a href="https://github.com/roukaiafadla/lawyer-portfolio" target="_blank" rel="noopener">GitHub<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
-            </div>
-          </article>
-        </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- DESIGN -->
   <section class="alt" id="design">
